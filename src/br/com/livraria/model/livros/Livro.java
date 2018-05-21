@@ -10,10 +10,14 @@ public class Livro {
     private String isbn;
     private String acabamento;
     private String papel;
-    private Double valor;
-    private Integer paginas;
+    private String organizador;
+    private String coordenador;
+    private double valor;
+    private String paginas;
     private Integer id;
-    private Integer ano;
+    private String ano;
+    private int qtd;
+    
 
     public String getTitulo() {
         return titulo;
@@ -79,19 +83,19 @@ public class Livro {
         this.papel = papel;
     }
 
-    public Double getValor() {
+    public double getValor() {
         return valor;
     }
 
-    public void setValor(Double valor) {
+    public void setValor(double valor) {
         this.valor = valor;
     }
 
-    public Integer getPaginas() {
+    public String getPaginas() {
         return paginas;
     }
 
-    public void setPaginas(Integer paginas) {
+    public void setPaginas(String paginas) {
         this.paginas = paginas;
     }
 
@@ -103,11 +107,49 @@ public class Livro {
         this.id = id;
     }
 
-    public Integer getAno() {
+    public String getAno() {
         return ano;
     }
 
-    public void setAno(Integer ano) {
+    public void setAno(String ano) {
         this.ano = ano;
     }
+
+    
+    public int getQtd() {
+        return qtd;
+    }
+
+    
+    public void setQtd(int qtd) {
+        this.qtd = qtd;
+    }
+
+   
+    public String getOrganizador() {
+        return organizador;
+    }
+
+   
+    public void setOrganizador(String organizador) {
+        this.organizador = organizador;
+    }
+
+    public String getCoordenador() {
+        return coordenador;
+    }
+
+   
+    public void setCoordenador(String coordenador) {
+        this.coordenador = coordenador;
+    }
+
+    
+    public String desc() {
+        return  titulo + " "+"R$ "+valor;
+    }
+    
+
+    
+    
 }

@@ -109,5 +109,22 @@ public class ServicoCliente {
         return clienteResposta;
 
     }
+    public static Cliente obterCpf(String cpf) {
+
+        Cliente clienteResposta = null;
+
+        try {
+
+            clienteResposta = MockCliente.obterCpf(cpf);
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+
+        }
+
+        return clienteResposta;
+
+    }
 
 }

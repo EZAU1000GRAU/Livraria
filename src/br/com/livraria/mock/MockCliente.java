@@ -22,9 +22,10 @@ public class MockCliente {
         listaClientes.add(cliente);
 
     }
-/**
-     *Substitui um cliente sem necessidade de 
-     * excluir e inserir novamente.
+
+    /**
+     * Substitui um cliente sem necessidade de excluir e inserir novamente.
+     *
      * @param clienteUpdate
      * @throws Exception
      */
@@ -67,8 +68,10 @@ public class MockCliente {
         }
 
     }
-/**
-     *Exclui o cliente com Id igual ao parametro
+
+    /**
+     * Exclui o cliente com Id igual ao parametro
+     *
      * @param id
      * @throws Exception
      */
@@ -98,8 +101,10 @@ public class MockCliente {
         }
 
     }
-/**
-     *Retorna uma lista com todos os clientes disponíveis
+
+    /**
+     * Retorna uma lista com todos os clientes disponíveis
+     *
      * @return
      * @throws Exception
      */
@@ -176,6 +181,34 @@ public class MockCliente {
                 if (clienteLista != null
                         && clienteLista.getId() != null
                         && clienteLista.getId() == id) {
+
+                    return clienteLista;
+
+                }
+
+                posicao++;
+            }
+
+        } else {
+            throw new Exception("Não há dados para pesquisa");
+        }
+
+        return null;
+    }
+
+    public static Cliente obterCpf(String cpf)
+            throws Exception {
+
+        if (listaClientes.size() > 0) {
+
+            int posicao = 0;
+            while (posicao < listaClientes.size()) {
+
+                Cliente clienteLista = listaClientes.get(posicao);
+
+                if (clienteLista != null
+                        && clienteLista.getCpf() != null
+                        && clienteLista.getCpf().contains(cpf)) {
 
                     return clienteLista;
 

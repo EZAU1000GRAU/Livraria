@@ -52,6 +52,15 @@ public class ValidadorCliente {
         if(cliente.getCidade()== null || "".equals(cliente.getCidade())){
             return "É necessário informar a cidade do cliente";
         }
+        if(cliente.getCpf()== null || "".equals(cliente.getCpf())){
+            return "É necessário informar o CPF do cliente";
+        }
+        if(cliente.getUf()== null || "".equals(cliente.getUf())){
+            return "É necessário informar o estado";
+        }
+        if(cliente.getRg()== null || "".equals(cliente.getRg())){
+            return "É necessário informar o RG";
+        }
 
         return null;
     }

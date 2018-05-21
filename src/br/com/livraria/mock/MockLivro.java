@@ -1,10 +1,8 @@
-
 package br.com.livraria.mock;
 
 import br.com.livraria.model.livros.Livro;
 import java.util.ArrayList;
 import java.util.List;
-
 
 public class MockLivro {
 
@@ -13,7 +11,8 @@ public class MockLivro {
     private static List<Livro> listaLivros = new ArrayList<>();
 
     /**
-     *Adiciona um livro ao mock
+     * Adiciona um livro ao mock
+     *
      * @param livro
      * @throws Exception
      */
@@ -24,8 +23,8 @@ public class MockLivro {
     }
 
     /**
-     *Substitui um livro sem necessidade de 
-     * excluir e inserir novamente.
+     * Substitui um livro sem necessidade de excluir e inserir novamente.
+     *
      * @param livroUpdate
      * @throws Exception
      */
@@ -64,7 +63,8 @@ public class MockLivro {
     }
 
     /**
-     *Exclui o livro com Id igual ao parametro
+     * Exclui o livro com Id igual ao parametro
+     *
      * @param id
      * @throws Exception
      */
@@ -88,7 +88,8 @@ public class MockLivro {
     }
 
     /**
-     *Retorna uma lista com todos os livros disponíveis
+     * Retorna uma lista com todos os livros disponíveis
+     *
      * @return
      * @throws Exception
      */
@@ -98,8 +99,8 @@ public class MockLivro {
     }
 
     /**
-     *Retorna uma lista com todos os livros que
-     * possuem titulo especificado
+     * Retorna uma lista com todos os livros que possuem titulo especificado
+     *
      * @param titulo
      * @return
      * @throws Exception
@@ -128,8 +129,8 @@ public class MockLivro {
     }
 
     /**
-     *Retorna uma lista com todos os livros
-     * que possuem o autor especificado
+     * Retorna uma lista com todos os livros que possuem o autor especificado
+     *
      * @param autor
      * @return
      * @throws Exception
@@ -145,7 +146,7 @@ public class MockLivro {
                 Livro livroLista = listaLivros.get(posicao);
 
                 if (livroLista != null && livroLista.getAutor() != null) {
-                    if (livroLista.getTitulo().contains(autor)) {
+                    if (livroLista.getAutor().contains(autor)) {
                         listaResultado.add(livroLista);
                     }
                 }
@@ -158,7 +159,8 @@ public class MockLivro {
     }
 
     /**
-     *Retorna o livro com o id especificado
+     * Retorna o livro com o id especificado
+     *
      * @param id
      * @return
      * @throws Exception

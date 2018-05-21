@@ -34,7 +34,7 @@ public class ValidadorLivro {
         if (livro.getPapel() == null || "".equals(livro.getPapel())) {
             return "Não foi informado o papel";
         }
-        if (livro.getValor() == null) {
+        if (livro.getValor() <= 0) {
             return "Não foi informado um valor";
         }
         if (livro.getPaginas() == null) {
